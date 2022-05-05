@@ -1,38 +1,94 @@
-.App {
-  text-align: center;
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+Body{
+	background-color: #62c2c8;
+	hyphens: auto;
+}
+body, input, button{
+	font-family: 'Raleway', sans-serif;
+}
+.Block_Grocery{
+	padding: 20px 0;
+}
+.Container{
+	background-color: #fff;
+	max-width: 400px;
+	padding: 0 15px;
+	margin: 0 auto;
+}
+.Container img{
+	max-width: 250px;
+}
+.Container h1{
+	text-align: center;
+	font-weight: 800;
+	padding: 20px 0;
+}
+/* смысла в этом блоке нет */
+.block_UserAction{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.block_UserAction>*:not(:last-child){
+	margin-bottom: 15px;
+}
+.userAction_input{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+/* убери ширину и не сработает/ а на кнопке все ок
+без ширины  */
+.userAction_input input{
+	outline: none;
+	width: 100%;
+	max-width: 70%;
+	padding: 5px 0;
+}
+.userAction_input input::placeholder{
+	font-size: 12px;
+}
+.btn{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.btn button{
+	width: 70%;
+	padding: 5px 0;
+}
+.add button{
+	background-color: #309201;
+	border: none;
+}
+.delete button{
+	background-color: #fe0000;
+	border: none;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.crossedLi{
+	text-decoration: line-through 2px #fe0000;
+	background-color: #ececec
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+li::before{
+	content: url("./icons4.png");
+	width: 20px;
+	padding: 5px;
 }
-
-.App-link {
-  color: #61dafb;
+ul{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+li{
+	width: 70%;
+	margin-bottom: 3px;
+	padding: 5px 0;
+	border: 2px solid #ececec;
 }
